@@ -109,6 +109,11 @@
             color: white;
         }
 
+        .btn-small {
+            padding: 8px 15px;
+            font-size: 0.9rem;
+        }
+
         /* Header & Navigation */
         header {
             position: fixed;
@@ -214,19 +219,6 @@
             display: flex;
             align-items: center;
             gap: 50px;
-        }
-
-        .about-img {
-            flex: 1;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-        }
-
-        .about-img img {
-            width: 100%;
-            height: auto;
-            display: block;
         }
 
         .about-text {
@@ -354,6 +346,14 @@
             justify-content: center;
             color: white;
             font-size: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .project-content {
@@ -381,6 +381,14 @@
         .project-links {
             display: flex;
             gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .team-note {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-top: 10px;
+            font-style: italic;
         }
 
         /* Skills Section */
@@ -650,12 +658,6 @@
         <div class="container">
             <h2>About Me</h2>
             <div class="about-content">
-                <div class="about-img">
-                    <!-- Replace with your image -->
-                    <div style="width:100%; height:400px; background:var(--primary); display:flex; align-items:center; justify-content:center; color:white; font-size:5rem;">
-                        <i class="fas fa-user"></i>
-                    </div>
-                </div>
                 <div class="about-text">
                     <h3>Information Systems & Digital Transformation Engineer</h3>
                     <p>I specialize in full-stack development (frontend & backend), Web and Mobile Development, Data Science, and Machine Learning. Passionate about designing innovative technological solutions and implementing practical projects.</p>
@@ -691,6 +693,10 @@
                         <h3>Web Application Developer</h3>
                         <div class="timeline-date">Tamkine Foundation – Final Year Internship (2025)</div>
                         <p>Built an interactive web application for educational statistics in Morocco. Developed dynamic React frontend and Django backend, integrated MySQL database. Created dashboards, interactive maps, and analytical visualizations.</p>
+                        <div class="project-links" style="margin-top: 15px;">
+                            <a href="#" class="btn btn-small">View Project Link</a>
+                            <a href="#" class="btn btn-outline btn-small">View Images</a>
+                        </div>
                     </div>
                 </div>
                 <div class="timeline-item">
@@ -711,12 +717,15 @@
             <div class="project-grid">
                 <!-- Project 1 -->
                 <div class="project-card">
-                    <div class="project-img" style="background:#6c63ff;">
+                    <div class="project-img">
+                        <!-- Replace with your actual image -->
+                        <!-- <img src="path-to-your-image.jpg" alt="IChhiwatBinIdik"> -->
                         <i class="fas fa-utensils"></i>
                     </div>
                     <div class="project-content">
                         <h3>IChhiwatBinIdik – Mobile & Web Platform</h3>
                         <p>Uberization of home meal ordering service. Mobile app: React Native frontend, Spring Boot backend, Firebase database. Admin web panel: React frontend, shared backend and database.</p>
+                        <p class="team-note">Team project with [Team Member Names]</p>
                         <div class="project-tags">
                             <span class="project-tag">React Native</span>
                             <span class="project-tag">Spring Boot</span>
@@ -724,8 +733,8 @@
                             <span class="project-tag">React</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="btn">Live Demo</a>
-                            <a href="#" class="btn btn-outline">Code</a>
+                            <a href="#" class="btn btn-small">Video Demo</a>
+                            <a href="#" class="btn btn-outline btn-small">Code</a>
                         </div>
                     </div>
                 </div>
@@ -733,6 +742,8 @@
                 <!-- Project 2 -->
                 <div class="project-card">
                     <div class="project-img" style="background:#ff6584;">
+                        <!-- Replace with your actual image -->
+                        <!-- <img src="path-to-your-image.jpg" alt="SmartRealEstate"> -->
                         <i class="fas fa-home"></i>
                     </div>
                     <div class="project-content">
@@ -744,8 +755,8 @@
                             <span class="project-tag">Data Analysis</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="btn">Live Demo</a>
-                            <a href="#" class="btn btn-outline">Code</a>
+                            <a href="#" class="btn btn-small">View Images</a>
+                            <a href="#" class="btn btn-outline btn-small">Code</a>
                         </div>
                     </div>
                 </div>
@@ -753,6 +764,8 @@
                 <!-- Project 3 -->
                 <div class="project-card">
                     <div class="project-img" style="background:#4a44c9;">
+                        <!-- Replace with your actual image -->
+                        <!-- <img src="path-to-your-image.jpg" alt="Skills Repository"> -->
                         <i class="fas fa-graduation-cap"></i>
                     </div>
                     <div class="project-content">
@@ -764,8 +777,8 @@
                             <span class="project-tag">Java</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="btn">Live Demo</a>
-                            <a href="#" class="btn btn-outline">Code</a>
+                            <a href="#" class="btn btn-small">View Images</a>
+                            <a href="#" class="btn btn-outline btn-small">Code</a>
                         </div>
                     </div>
                 </div>
@@ -773,6 +786,8 @@
                 <!-- Project 4 -->
                 <div class="project-card">
                     <div class="project-img" style="background:#36b37e;">
+                        <!-- Replace with your actual image -->
+                        <!-- <img src="path-to-your-image.jpg" alt="Chess & Tic-Tac-Toe"> -->
                         <i class="fas fa-chess"></i>
                     </div>
                     <div class="project-content">
@@ -785,8 +800,8 @@
                             <span class="project-tag">Algorithms</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="btn">Live Demo</a>
-                            <a href="#" class="btn btn-outline">Code</a>
+                            <a href="#" class="btn btn-small">View Images</a>
+                            <a href="#" class="btn btn-outline btn-small">Code</a>
                         </div>
                     </div>
                 </div>
@@ -794,11 +809,14 @@
                 <!-- Project 5 -->
                 <div class="project-card">
                     <div class="project-img" style="background:#ffab00;">
+                        <!-- Replace with your actual image -->
+                        <!-- <img src="path-to-your-image.jpg" alt="Plateforme-de-Suivi"> -->
                         <i class="fas fa-child"></i>
                     </div>
                     <div class="project-content">
                         <h3>Plateforme-de-Suivi – Mobile App</h3>
                         <p>Built a mobile app to track children's school progress (Thunkable). Backend APIs with Node.js + Netlify serverless functions, connected to Supabase database.</p>
+                        <p class="team-note">Team project with [Team Member Names]</p>
                         <div class="project-tags">
                             <span class="project-tag">Thunkable</span>
                             <span class="project-tag">Node.js</span>
@@ -806,8 +824,8 @@
                             <span class="project-tag">Netlify</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="btn">Live Demo</a>
-                            <a href="#" class="btn btn-outline">Code</a>
+                            <a href="#" class="btn btn-small">View Images</a>
+                            <a href="#" class="btn btn-outline btn-small">Code</a>
                         </div>
                     </div>
                 </div>
